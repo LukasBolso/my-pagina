@@ -1,0 +1,203 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #0033a0; /* Azul Nacional */
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+/* Navigation */
+nav {
+  background-color: #d1001c; /* Rojo Nacional */
+  padding: 0.5rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcccb;
+}
+
+/* Main Content */
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  color: #0033a0;
+  border-bottom: 2px solid #d1001c;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #0033a0;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+
+/* Estilo para el botón y la galería de equipo */
+.team-button-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.team-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #0033a0, #0055ff);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.team-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 51, 160, 0.4);
+}
+
+#equipo {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.team-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.team-gallery img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Sección equipo y galería */
+#equipo {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.team-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.team-gallery img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.jugador {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.jugador img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.nombre {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #0033a0;
+}

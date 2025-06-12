@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Nacional de Football</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Popup personalizado */
+    #custom-popup {
+      position: fixed;
+      display: none;
+      background: white;
+      border: 2px solid #0033a0;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Club Nacional de Football</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Historia</a></li>
+      <li><a href="#">Plantel</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Sobre el Club</h2>
+      <p>El Club Nacional de Football fue fundado el 14 de mayo de 1899. Es uno de los clubes más grandes y tradicionales de Uruguay.</p>
+    </section>
+    <section>
+      <h2>Contador de visitas</h2>
+      <p>Esta página ha sido vista <span id="contador"></span> veces en este navegador.</p>
+    </section>
+  
+  <!-- Botón moderno -->
+  <div class="team-button-container">
+    <a href="#equipo" class="team-button">Conoce el equipo</a>
+  </div>
+
+  <!-- Sección de equipo -->
+  <section id="equipo">
+    <h2>Equipo</h2>
+    <div class="team-gallery">
+  <div class="jugador">
+    <img src="https://i.postimg.cc/7hjXr16x/mejia.png" alt="Jugador 1">
+    <span class="nombre">Luis Mejía:PORTERO</span>
+  </div>
+  <div class="jugador">
+    <img src="https://i.postimg.cc/BQM7vFVB/calion.png" alt="Jugador 2">
+    <span class="nombre">Paolo Calione:DEFENSOR</span>
+  </div>
+  <div class="jugador">
+    <img src="https://i.postimg.cc/wMDR3D2x/coates.png" alt="Jugador 3">
+    <span class="nombre">Sebastián Coates:DEFENSOR</span>
+  </div>
+  <div class="jugador">
+    <img src="https://i.postimg.cc/1zykdS2v/nergo.png" alt="Jugador 4">
+    <span class="nombre">Gabriel Báez:DEFENSOR</span>
+  </div>
+  <div class="jugador">
+    <img src="https://i.postimg.cc/xC5TZg6z/boggio.png" alt="Jugador 5">
+    <span class="nombre">Luciano Boggio:CENTROCAMPISTA</span>
+  </div>
+  <div class="jugador">
+    <img src="https://i.postimg.cc/Hx9VgTkj/recoba.png" alt="Jugador 6">
+    <span class="nombre">Jeremía Recoba:CENTROCAMPISTA</span>
+  </div>
+  <div class="jugador">
+    <img src="https://i.postimg.cc/ncfLMbBk/carne.png" alt="Jugador 7">
+    <span class="nombre">Gonzalo Carneiro:DELANTERO</span>
+  </div>
+  <div class="jugador">
+    <img src="https://i.postimg.cc/Prt5mGrQ/edu.png" alt="Jugador 8">
+    <span class="nombre">Eduardo Vargas:DELANTERO</span>
+  </div>
+  <div class="jugador">
+    <img src="https://i.postimg.cc/g0vvxF0b/nico.png" alt="Jugador 9">
+    <span class="nombre">Nicolás López:DELANTERO</span>
+  </div>
+  <div class="jugador">
+    <img src="https://i.postimg.cc/4Nm2myRC/erere.png" alt="Jugador 10">
+    <span class="nombre">Renzo Sánchez:DELANTERO</span>
+  </div>
+  <div class="jugador">
+    <img src="https://i.postimg.cc/fbZvjTpR/hero.png" alt="Jugador 11">
+    <span class="nombre">Diego Herazo:DELANTERO</span>
+  </div>
+    </div>
+      <div class="jugador"><a href="#jugador2"><img src="ruta-a-imagen2.jpg" alt="Jugador 2"></a></div>
+      <div class="jugador"><a href="#jugador3"><img src="ruta-a-imagen3.jpg" alt="Jugador 3"></a></div>
+      <div class="jugador"><a href="#jugador4"><img src="ruta-a-imagen4.jpg" alt="Jugador 4"></a></div>
+      <div class="jugador"><a href="#jugador5"><img src="ruta-a-imagen5.jpg" alt="Jugador 5"></a></div>
+      <div class="jugador"><a href="#jugador6"><img src="ruta-a-imagen6.jpg" alt="Jugador 6"></a></div>
+      <div class="jugador"><a href="#jugador7"><img src="ruta-a-imagen7.jpg" alt="Jugador 7"></a></div>
+      <div class="jugador"><a href="#jugador8"><img src="ruta-a-imagen8.jpg" alt="Jugador 8"></a></div>
+      <div class="jugador"><a href="#jugador9"><img src="ruta-a-imagen9.jpg" alt="Jugador 9"></a></div>
+      <div class="jugador"><a href="#jugador10"><img src="ruta-a-imagen10.jpg" alt="Jugador 10"></a></div>
+      <div class="jugador"><a href="#jugador11"><img src="ruta-a-imagen11.jpg" alt="Jugador 11"></a></div>
+    </div>
+  </section>
+
+</main>
+
+  <footer>
+    <p>© 2025 Club Nacional de Football</p>
+  </footer>
+
+  <!-- Contador de vistas -->
+  <script>
+    let visitas = localStorage.getItem("visitas") || 0;
+    visitas++;
+    localStorage.setItem("visitas", visitas);
+    document.getElementById("contador").innerText = visitas;
+  </script>
+
+  <!-- Popup personalizado al hacer clic derecho -->
+  <div id="custom-popup">Club Nacional de Football, fundado el 14 de mayo de 1899</div>
+  <script>
+    const popup = document.getElementById('custom-popup');
+
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      popup.style.display = 'block';
+      popup.style.left = e.pageX + 'px';
+      popup.style.top = e.pageY + 'px';
+    });
+
+    document.addEventListener('click', function() {
+      popup.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
